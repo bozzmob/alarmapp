@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alarm App</title>
+	<link rel="stylesheet" type="text/css" href="css/alarmstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/snackbar.css">
+	<script type="text/javascript" src="js/alarm.js"></script>
+</head>
+<body onload="alarmapp.setDefaults()">
+<div id="alarmapp" class="aligncenter">
+<div id="createalarm">
+	<h2>Enter the Time</h2>
+	<input style="align:center" id= "hourval"  maxlength="2" type="number" max="24" min="0" onkeydown="return false"> :
+	<input id= "minuteval" type="number" maxlength="2" max="59" min="0" onkeydown="return false">
+	<input type="button" class="button buttonblack" value="Create" onclick="alarmapp.create()">
+
+</div><br/><br/>
+<div id="displayalarms"></div>
+</div>
+<div id="snackbar"></div>
+</body>
+</html>
