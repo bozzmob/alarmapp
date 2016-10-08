@@ -15,12 +15,10 @@ var alarmapp = (function() {
                     var displayalarms = document.getElementById('displayalarms');
                     var alarmindex = existingalarm(displayalarms);
                     var newalarm = '<div id="alarmindex' + alarmindex + '"> \
-		                    <span class="alarmtext" id="time' + alarmindex + '">' + hours + ':' + transformMinutes(minutes) + '</span> \
-		                    <input type="button" class="button buttongreen" value="Edit" onclick="alarmapp.editalarm(' + alarmindex + ')"> \
-		                    <input type="button" class="button buttonred" value="Delete" onclick="alarmapp.deletealarm(' + alarmindex + ',0)"></div>';
+		                           <span class="alarmtext" id="time' + alarmindex + '">' + hours + ':' + transformMinutes(minutes) + '</span> \
+		                           <input type="button" class="button buttongreen" value="Edit" onclick="alarmapp.editalarm(' + alarmindex + ')"> \
+		                           <input type="button" class="button buttonred" value="Delete" onclick="alarmapp.deletealarm(' + alarmindex + ',0)"></div>';
                     displayalarms.innerHTML += newalarm;
-                    // hrsid.value = '';
-                    // minid.value = '';
                     alarmapp.setDefaults();
                     manipulatealarm = 0;
                     displayMessage("Created Alarm " + alarmindex);
